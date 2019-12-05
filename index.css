@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.all {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  background-color: rgba(245, 225, 46, 0.212);
+}
+.myMouse {
+  cursor: pointer;
+}
+.all .out {
+  width: 90%;
+  max-width: 900px;
+  height: 100%;
+  position: relative;
+  margin: auto;
+  background: red;
+}
+.all .about {
+  background-color: white;
+  padding: 40px;
+  font-family: '微軟正黑體';
+}
+.all .about .color {
+  color: red;
+}
+.all .about .title {
+  margin: 0 0 20px;
+  text-align: center;
+  font-size:22px;
+}
+.all .about .picture {
+  position: relative;
+  display: block;
+  margin: auto;
+  border-radius: 2%;
+  width: 98%;
+  height: 60%;
+}
+.all .picture:after{
+  position: absolute;
+  left:-150%; /*改變left的值，讓其相對element隱藏*/
+  top: 0;
+  width: 70%;
+  height: 100%;
+  content: "";
+  /* Safari 5.1 - 6.0 */
+  background: -webkit-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 100%);
+  /* Opera 11.1 - 12.0 */
+  background: -o-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 100%);
+  /* Firefox 3.6 - 15 */
+  background: -moz-linear-gradient(left,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 100%);
+  /* 標準的語法 */
+  background: linear-gradient(to right,rgba(255,255,255,0) 0,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 100%);
+  transform: skewX(-45deg);
+}
+.all .about .container {
+  text-align: center;
+  margin: 20px 0;
+}
+.all .out .btn-close {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  line-height: auto;
+  text-align: center;
+  top: 0;
+  right: 0;
+  font-size: 6px;
+}
+.all .out .btn-close:hover{
+  background-color:rgb(41, 40, 40);
+  color:white;
+}
+.picture:hover:after{
+  left: 150%;
+  transition: 2s ease;
+}
+@media screen and (min-width: 728px) {
+  .all .about .title {
+    font-size: 28px;
+  }
+  .all .about .container {
+    font-size: 20px;
+  }
+  .all .out .btn-close {
+    width: 25px;
+    height: 25px;
+    line-height: auto;
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 970px) {
+  .all .about .title {
+    font-size: 38px;
+  }
+  .all .about .container {
+    font-size: 30px;
+  }
+  .all .out .btn-close {
+    width: 30px;
+    height: 30px;
+    line-height: auto;
+    font-size: 15px;
+  }
+}
+
+
+
